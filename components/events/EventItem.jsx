@@ -1,4 +1,5 @@
 import styles from "./EventItem.module.css";
+import Image from "next/image"
 import Button from "../ui/Button";
 import DateIcon from "../icons/date-icon";
 import AddressIcon from "../icons/address-icon";
@@ -16,7 +17,8 @@ export default function EventItem(props) {
 
   return (
     <li className={styles.item}>
-      <img src={"/" + image} alt={title} />
+      <Image src={"/" + image} alt={title} width={250} height={160} />
+      {/* <img src={"/" + image} alt={title} /> */}
       <div className={styles.content}>
         <div className={styles.summary}>
           <h2>{title}</h2>
